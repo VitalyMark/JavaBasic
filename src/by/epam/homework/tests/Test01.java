@@ -24,14 +24,14 @@ public class Test01 {
 //1. Приложение генерирует 100 случайных чисел. Найти наименьшее и наибольшее число из сгенерированных чисел, используя только один цикл.
 // Примечание, генерируемые числа могут быть как положительные, так и отрицательные.
         // Вещественное число в интервале[ -100; +100)
-        double a, x_min = 0;
-        double x_max = 0;
+        double a, xMin = 0;
+        double xMax = 0;
         for (int i = 0; i < 99; i++) {
             a = Math.random() * 200 - 100;
-            if (x_min > a) x_min = a;
-            else if (x_max < a) x_max = a;
+            if (xMin > a) xMin = a;
+            else if (xMax < a) xMax = a;
         }
-        System.out.println("x_max= " + x_max + " x_min= " + x_min);
+        System.out.println("xMax= " + xMax + " xMin= " + xMin);
     }
 
 //2. В текстовом хранятся строки, содержащие целые числа, разделенные пробелами. Вывести на консоль сумму каждой строки в следующем виде
@@ -44,9 +44,9 @@ public class Test01 {
         fw.write(a+" ");
         }
         fw.write("\n");
-}
-    fw.close();
-}
+      }
+      fw.close();
+    }
 
     private static void task02() throws Exception {
         writerFile();
@@ -92,20 +92,20 @@ public class Test01 {
         System.out.println(daysBetween);
         */
 //второе решение
-       int year_start, month_start;
-       int year_stop, month_stop;
-       year_start=2018; month_start=5;
-       year_stop=2021; month_stop =5;
+       int yearStart, monthStart;
+       int yearStop, monthStop;
+       yearStart=2018; monthStart=5;
+       yearStop=2021; monthStop =5;
 
        int days;
        int sumdays=0;
 
-        for (int year = year_start; year<=year_stop;  year++){
-            int month_end=12;
-            if (year != year_start) month_start=1;
-            if (year == year_stop) month_end=month_stop;
+        for (int year = yearStart; year<=yearStop;  year++){
+            int monthEnd=12;
+            if (year != yearStart) monthStart=1;
+            if (year == yearStop) monthEnd=monthStop;
 
-            for(int month = month_start; month<=month_end; month++ ) {
+            for(int month = monthStart; month<=monthEnd; month++ ) {
                 switch (month) {
                     case 1:
                     case 3:
@@ -133,10 +133,5 @@ public class Test01 {
             }
         }
         System.out.println("Общее количество дней " +sumdays);
-
-
-
-
-
     }
 }
